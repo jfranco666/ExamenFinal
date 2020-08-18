@@ -9,6 +9,6 @@ package Modelo;
  *
  * @author Rosa Ayala
  */
-public class Estudiante {
+public class provedor {
     
 }
