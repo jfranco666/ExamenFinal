@@ -1,6 +1,7 @@
 package modeloDAO;
-import config.conectaBD;
+
 import Interfaces.CRUD;
+import config.conectaBD;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -16,7 +17,6 @@ public class productoDOA implements CRUD{
     ResultSet rs;
     productoDOA e = new productoDOA();
     
-    @Override
     public List listarproducto() {
         ArrayList<producto> productos = new ArrayList<>();
         String consulta = " select *  "
@@ -34,7 +34,7 @@ public class productoDOA implements CRUD{
                 producto.setCodigo(rs.getString("codigo"));
                 producto.setStock(rs.getInt("stock"));
                 producto.setEstado(rs.getString("estado"));
-                productos.add(producto);
+                producto.add(producto);
             }            
         } catch (SQLException e) {
             System.out.println("Error durante el select");
@@ -126,5 +126,5 @@ public class productoDOA implements CRUD{
         }
         return false;
     }       
-    
+
 }
