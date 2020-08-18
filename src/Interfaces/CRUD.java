@@ -1,14 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Interfaces;
 
-/**
- *
- * @author Rosa Ayala
- */
+import java.util.List;
+import Modelo.producto;
+
 public interface CRUD {
-    
+  
+    public List listarestudiante();
+    public producto buscarestudiante(int idestudiante);
+    public boolean agregarestudiante(producto estudiante);
+    public boolean editarestudiante(producto estudiante);
+    public boolean eliminarestudiante(int idestudiante);
 }
